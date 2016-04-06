@@ -74,7 +74,7 @@ public class Dist {
        
         double random = Math.random();
         
-        return (int) (1 + Math.floor(random * 19));
+        return 1 + (int)(random * 20);
     }
 
     public static double generatePosition() {

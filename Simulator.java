@@ -6,11 +6,16 @@ import java.util.Scanner;
 
 public class Simulator {
 
+	//Statistical counters
 	protected static int callsDropped;
 	protected static int callsBlocked;
 	protected static int totalCalls;
+	//FCA Scheme
 	protected static int FCA;
+	
 	private static double SimulationClock;
+	
+	//Describe state of system
 	private static ArrayList<BaseStation> baseStations;
 	private static LinkedList<Event> eventList;
 	protected static List<ArrayList> inputData = new ArrayList<>();
@@ -303,9 +308,9 @@ public class Simulator {
 	}
 	
     private static Event schedule() {
-        
+        //timing routine
         Event currentEvent = eventList.pop();
-        SimulationClock = currentEvent.getTime();
+        SimulationClock = currentEvent.getTime(); 
         
         return currentEvent;
     }
